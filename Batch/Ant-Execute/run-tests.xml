@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="antlib:org.apache.tools.ant" name="run-tests">
+
+
+    <include file="${basedir}\..\Ant-Common\common.xml" />
+    <include file="${basedir}\..\Ant-Common\temp.xml" />
+    <include file="${basedir}\..\Ant-Common\classpath.xml" />
+    <include file="${basedir}\..\Ant-Build\build.xml" />
+    <include file="${basedir}\..\Ant-Build\build-tests.xml" />
+
+
+    <target name="runTests" depends="build-tests.build">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= run-tests.runTests =-----" />
+        <echo />
+
+        <junit printsummary="yes" showoutput="true" fork="yes" dir="${project.tmp.dir}">
+
+            <classpath refid="tests.execution.classpath" />
+
+            <batchtest todir="${project.tmp.tests-results.dir}">
+                <fileset dir="${project.tmp.tests-src.dir}">
+                  <include name="**/*Test.java" />
+                </fileset>
+            </batchtest>
+
+            <formatter type="xml" usefile="yes" />
+
+        </junit>
+
+
+        <junitreport todir="${project.tmp.tests-report.dir}">
+            <fileset dir="${project.tmp.tests-results.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${project.tmp.tests-report.dir}\html" />
+        </junitreport>
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+</project>

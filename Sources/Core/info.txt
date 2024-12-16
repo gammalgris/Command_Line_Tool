@@ -1,0 +1,3 @@
+set JCP=.\classes;..\..\Libraries\Jmul\jmul-2.1.5.jar;..\..\Libraries\Jmul\properties
+java -cp %JCP% jmul.terminal.Runner
+java -cp %JCP% assistant.SimpleRunner

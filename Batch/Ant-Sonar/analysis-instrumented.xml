@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="antlib:org.apache.tools.ant" name="analysis-instrumented">
+
+
+    <include file="${basedir}\..\Ant-Common\common.xml" />
+    <include file="${basedir}\..\Ant-Common\temp.xml" />
+    <include file="${basedir}\..\Ant-Common\classpath.xml" />
+    <include file="${basedir}\..\Ant-Build\build.xml" />
+    <include file="${basedir}\..\Ant-Build\build-tests.xml" />
+    <include file="${basedir}\..\Ant-Build\build-instrumented.xml" />
+    <include file="${basedir}\..\Ant-Execute\run-instrumented-tests.xml" />
+    <include file="${basedir}\..\Ant-Sonar\project.xml" />
+    <include file="${basedir}\..\Ant-Sonar\project-instrumented.xml" />
+
+
+    <taskdef name="sonar" classname="org.sonarsource.scanner.ant.SonarQubeTask" classpath="${sonar.ant.task.lib}" />
+
+    <target name="sonar" depends="run-instrumented-tests.coverage, project.info">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= analysis-instrumented.sonar =-----" />
+        <echo />
+
+        <sonar />
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+</project>

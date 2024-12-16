@@ -1,0 +1,23 @@
+
+# Shutdown hooks and JVM behaviour
+
+What happened:
+
+Tested the behaviour of a simple java programm with and without shutdown hooks.
+
+Without shutdown hooks the JVM exits with exit code 0. The JVM exits abruptly on CTRL+C.
+Didn't check the exit code.
+
+With shutdown hooks the JVM exits with exit code 130 on CTRL+C (oracle Java 8 and OpenJDK 21).
+With shutdown hooks the JVM exits with a negative exit code on CTRL+C (Oracle 20 & 21 JDK).
+The JVM shuts down but when running from DOS Batch console input is required to release
+the console.
+Didn't check yet normal exit behaviour as console application is yet being refactored.
+
+There seems to be an issue with oracles JVM and exit behavior with shutdown hooks.
+Maybe it's an issue since indtroduction of lightweight threads?
+
+Need to test behaviour in linux and windows when starting the java program from script.
+There might be additional issues with start /B /Wait under windows.
+
+Need to test killing the java process under linux and windows (CTRL+C and kill command).

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="antlib:org.apache.tools.ant" xmlns:sonar="antlib:org.sonar.ant" name="analysis">
+
+
+    <include file="${basedir}\..\Ant-Common\common.xml" />
+    <include file="${basedir}\..\Ant-Common\temp.xml" />
+    <include file="${basedir}\..\Ant-Common\classpath.xml" />
+    <include file="${basedir}\..\Ant-Build\build.xml" />
+    <include file="${basedir}\..\Ant-Build\build-tests.xml" />
+    <include file="${basedir}\..\Ant-Execute\run-tests.xml" />
+    <include file="${basedir}\..\Ant-Sonar\project.xml" />
+
+
+    <target name="sonar" depends="run-tests.runTests, project.info">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= analysis.sonar =-----" />
+        <echo />
+
+        <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+            <classpath path="${sonar.ant.task.lib}" />
+        </taskdef>
+
+        <sonar:sonar />
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+</project>

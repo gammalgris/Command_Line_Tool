@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="antlib:org.apache.tools.ant" name="build-instrumented" default="instrument">
+
+
+    <include file="${basedir}\..\Ant-Common\common.xml" />
+    <include file="${basedir}\..\Ant-Common\temp.xml" />
+    <include file="${basedir}\..\Ant-Common\classpath.xml" />
+    <include file="${basedir}\..\Ant-Build\build.xml" />
+    <include file="${basedir}\..\Ant-Build\build-tests.xml" />
+
+
+    <taskdef classpathref="cobertura.execution.classpath" resource="tasks.properties"/>
+
+
+    <target name="instrument">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= build-instrumented.instrument =-----" />
+        <echo />
+
+        <cobertura-instrument todir="${project.tmp.instrumented.dir}" datafile="${project.tmp.coverage.file}">
+            <ignore regex="org.slf4j.*" />
+            <fileset dir="${project.tmp.build.dir}">
+                <include name="**/*.class" />
+                <exclude name="**/*Test.class" />
+            </fileset>
+        </cobertura-instrument>
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+</project>

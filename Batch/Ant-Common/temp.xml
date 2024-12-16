@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="antlib:org.apache.tools.ant" name="temp">
+
+
+    <include file="${basedir}\..\Ant-Common\common.xml" />
+
+
+    <target name="info">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= temp.info =-----" />
+        <echo />
+
+        <echo />
+        <echo message="  ${project.name}" />
+        <echo />
+        <echo />
+        <echo message="  project tmp dir ................................ ${project.tmp.dir}" />
+        <echo />
+        <echo message="  project tmp src dir ............................ ${project.tmp.src.dir}" />
+        <echo message="  project tmp cfg dir ............................ ${project.tmp.cfg.dir}" />
+        <echo message="  project tmp build dir .......................... ${project.tmp.build.dir}" />
+        <echo message="  project tmp deploy dir ......................... ${project.tmp.deploy.dir}" />
+        <echo message="  project tmp instrumented dir ................... ${project.tmp.instrumented.dir}" />
+        <echo message="  project tmp javadoc dir ........................ ${project.tmp.javadoc.dir}" />
+        <echo />
+        <echo message="  project tmp tests-src dir ...................... ${project.tmp.tests-src.dir}" />
+        <echo message="  project tmp tests-cfg dir ...................... ${project.tmp.tests-cfg.dir}" />
+        <echo message="  project tmp tests-build dir .................... ${project.tmp.tests-build.dir}" />
+        <echo />
+        <echo message="  project tmp tests-results dir .................. ${project.tmp.tests-results.dir}" />
+        <echo message="  project tmp tests-report dir ................... ${project.tmp.tests-report.dir}" />
+        <echo />
+        <echo message="  project tmp coverage file ...................... ${project.tmp.coverage.file}" />
+        <echo message="  project tmp coverage-report dir ................ ${project.tmp.coverage-report.dir}" />
+        <echo message="  project tmp coverage-summary-report dir ........ ${project.tmp.coverage-summary-report.dir}" />
+        <echo message="  project tmp coverage-alternate-report dir ...... ${project.tmp.coverage-alternate-report.dir}" />
+        <echo />
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+
+    <target name="initTmp">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= temp.initTmp =-----" />
+        <echo />
+
+        <delete dir="${project.tmp.dir}" />
+        <sleep seconds="5" />
+        <mkdir dir="${project.tmp.dir}" />
+
+        <mkdir dir="${project.tmp.src.dir}" />
+        <mkdir dir="${project.tmp.cfg.dir}" />
+        <mkdir dir="${project.tmp.build.dir}" />
+        <mkdir dir="${project.tmp.deploy.dir}" />
+        <mkdir dir="${project.tmp.instrumented.dir}" />
+        <mkdir dir="${project.tmp.javadoc.dir}" />
+
+        <mkdir dir="${project.tmp.tests-src.dir}" />
+        <mkdir dir="${project.tmp.tests-cfg.dir}" />
+        <mkdir dir="${project.tmp.tests-build.dir}" />
+        <mkdir dir="${project.tmp.tests-results.dir}" />
+        <mkdir dir="${project.tmp.tests-report.dir}" />
+
+        <mkdir dir="${project.tmp.coverage-report.dir}" />
+        <mkdir dir="${project.tmp.coverage-summary-report.dir}" />
+        <mkdir dir="${project.tmp.coverage-alternate-report.dir}" />
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+
+    <target name="disposeTmp">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= temp.disposeTmp =-----" />
+        <echo />
+
+        <delete dir="${project.tmp.dir}" />
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+</project>

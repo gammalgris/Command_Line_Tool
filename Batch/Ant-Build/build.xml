@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="antlib:org.apache.tools.ant" name="build" default="build">
+
+
+    <include file="${basedir}\..\Ant-Common\common.xml" />
+    <include file="${basedir}\..\Ant-Common\temp.xml" />
+    <include file="${basedir}\..\Ant-Common\classpath.xml" />
+
+
+    <target name="copySources">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= build.copySources =-----" />
+        <echo />
+
+        <copy todir="${project.tmp.src.dir}" overwrite="true">
+            <fileset dir="${package.core.src.dir}">
+                <include name="**/*.java" />
+            </fileset>
+            <fileset dir="${package.log-viewer.src.dir}">
+                <include name="**/*.java" />
+            </fileset>
+        </copy>
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+
+    <target name="copyResources">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= build.copyResources =-----" />
+        <echo />
+
+        <copy todir="${project.tmp.cfg.dir}" overwrite="true">
+            <fileset dir="${package.version.cfg.dir}">
+                <include name="**/*.properties" />
+            </fileset>
+        </copy>
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+
+    <target name="build" depends="common.info, classpath.info, temp.info, temp.initTmp, copySources, copyResources">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= build.build=-----" />
+        <echo />
+
+        <javac includeantruntime="false" target="${project.java.version}" srcdir="${project.tmp.src.dir}" destdir="${project.tmp.build.dir}" verbose="true" classpathref="jmul.build.classpath" debug="on" />
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+
+</project>

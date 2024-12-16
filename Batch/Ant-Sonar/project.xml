@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="antlib:org.apache.tools.ant" name="project">
+
+
+    <include file="${basedir}\..\Ant-Common\common.xml" />
+
+
+    <property name="project.lib.dir" location="${project.dir}\Libraries" />
+    <property name="sonar.ant.task.lib" location="${project.lib.dir}\SonarAntTask\sonarqube-ant-task-2.6.0.1426.jar" />
+
+    <property name="project.tmp.dir" location="${project.dir}\tmp" />
+    <property name="project.tmp.src.dir" location="${project.tmp.dir}\src" />
+    <property name="project.tmp.build.dir" location="${project.tmp.dir}\build" />
+
+
+    <property name="sonar.host.url" value="http://localhost:9000" />
+
+    <property name="sonar.projectKey" value="jmul" />
+    <property name="sonar.projectName" value="JMUL" />
+    <property name="sonar.sourceEncoding" value="UTF-8" />
+    <property name="sonar.java.source" value="${project.java.version}" />
+    <property name="sonar.sources" value="${project.tmp.src.dir}" />
+    <property name="sonar.java.binaries" value="${project.tmp.build.dir}" />
+    <!-- property name="sonar.java.libraries" value="" / -->
+    <property name="sonar.java.test.binaries" value="${project.tmp.tests-build.dir}" />
+    <property name="sonar.java.test.libraries" value="${project.lib.junit.dir}" />
+    <property name="sonar.projectBaseDir" value="${project.tmp.dir}" />
+    <property name="sonar.junit.reportsPath" value="${project.tmp.tests-results.dir}" />
+    <property name="sonar.surefire.reportsPath" value="${project.tmp.tests-results.dir}" />
+    <property name="sonar.tests" value="${project.tmp.tests-src.dir}" />
+    <property name="sonar.verbose" value="true" />
+    <property name="sonar.scm.exclusions.disabled" value="true" />
+
+
+    <!-- TODO - replace this section with the following comment section -->
+    <input message="Enter the project's version:" addproperty="sonar.projectVersion" />
+
+    <condition property="do.abort">
+        <equals arg1="" arg2="${sonar.projectVersion}"/>
+    </condition>
+
+    <fail if="do.abort">No version was specified!</fail>
+
+    <!-- condition property="do.abort">
+        <equals arg1="" arg2="${version}"/>
+    </condition>
+
+    <fail if="do.abort">No version was specified!</fail>
+
+    <property name="sonar.projectVersion" value="${version}" / -->
+
+
+    <target name="info">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= project.info =-----" />
+        <echo />
+
+        <echo />
+        <echo message="  project dir ....................... ${project.dir}" />
+        <echo />
+        <echo />
+        <echo message="  project tmp dir ................... ${project.tmp.dir}" />
+        <echo />
+        <echo message="  project tmp src dir ............... ${project.tmp.src.dir}" />
+        <echo message="  project tmp build dir ............. ${project.tmp.build.dir}" />
+        <echo />
+        <echo />
+        <echo message="  sonar host url .................... ${sonar.host.url}" />
+        <echo message="  sonar project key ................. ${sonar.projectKey}" />
+        <echo message="  sonar project name ................ ${sonar.projectName}" />
+        <echo message="  sonar project version ............. ${sonar.projectVersion}" />
+        <echo message="  sonar sources ..................... ${sonar.sources}" />
+        <echo message="  sonar java binaries ............... ${sonar.java.binaries}" />
+        <echo message="  sonar project base dir ............ ${sonar.projectBaseDir}" />
+        <echo message="  sonar junit reports dir ........... ${sonar.junit.reportsPath}" />
+        <echo />
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+</project>

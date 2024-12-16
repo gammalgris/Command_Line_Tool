@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="antlib:org.apache.tools.ant" name="common">
+
+
+    <property name="build.log" value="build.log" />
+
+
+    <tstamp>
+        <format property="project.build.timestamp" pattern="yyyy-MM-dd  HH:mm:ss" />
+    </tstamp>
+
+
+    <property name="project.name" value="Command Line Tool" />
+
+    <property name="project.dir" location="${basedir}\..\.." />
+    <property name="batch.base.dir" location="${project.dir}\Batch" />
+
+
+    <property name="project.java.version" value="1.8" />
+
+
+    <loadproperties srcfile="${batch.base.dir}\Ant-Common\directories.properties" />
+    <loadproperties srcfile="${batch.base.dir}\Ant-Common\tmp.properties" />
+    <loadproperties srcfile="${package.version.cfg.dir}\jmul\terminal\version.properties" />
+
+
+    <condition property="revision" value="n/a">
+        <not>
+            <isset property="revision" />
+        </not>
+    </condition>
+
+
+    <target name="info">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= common.info =-----" />
+        <echo />
+
+        <echo />
+        <echo message="  ${project.name}" />
+        <echo />
+        <echo message="  build java version: ${project.java.version}" />
+        <echo message="     build timestamp: ${project.build.timestamp}" />
+        <echo />
+        <echo message="     version library: ${version}" />
+        <echo message="         version rcs: ${revision}" />
+        <echo />
+        <echo />
+        <echo message="  ant version ................................. ${ant.version}" />
+        <echo />
+        <echo message="  base dir .................................... ${basedir}" />
+        <echo message="  project dir ................................. ${project.dir}" />
+        <echo />
+        <echo />
+        <echo message="  packages base dir ........................... ${packages.base.dir}" />
+        <echo />
+        <echo message="  package core dir ............................ ${package.core.dir}" />
+        <echo message="  package core src dir ........................ ${package.core.src.dir}" />
+        <echo message="  package log viewer dir ...................... ${package.log-viewer.dir}" />
+        <echo message="  package log viewer src dir .................. ${package.log-viewer.src.dir}" />
+        <echo message="  package version dir ......................... ${package.version.dir}" />
+        <echo message="  package version cfg dir ..................... ${package.version.cfg.dir}" />
+        <echo />
+        <echo message="  package core tests dir ...................... ${package.core-tests.src.dir}" />
+        <echo message="  package log viewer tests src dir ............ ${package.log-viewer-tests.src.dir}" />
+        <echo />
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+</project>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="antlib:org.apache.tools.ant" name="deploy" default="deploy">
+
+
+    <include file="${basedir}\..\Ant-Common\common.xml" />
+    <include file="${basedir}\..\Ant-Common\temp.xml" />
+    <include file="${basedir}\..\Ant-Common\classpath.xml" />
+    <include file="${basedir}\..\Ant-Build\build.xml" />
+    <include file="${basedir}\..\Ant-Build\build-javadoc.xml" />
+
+
+    <property name="jar.classes.file" location="${project.tmp.deploy.dir}\clt-${version}.jar" />
+    <property name="jar.sources.file" location="${project.tmp.deploy.dir}\clt-${version}-sources.jar" />
+    <property name="jar.javadoc.file" location="${project.tmp.deploy.dir}\clt-${version}-javadoc.jar" />
+
+
+    <target name="info">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= deploy.info =-----" />
+        <echo />
+
+        <echo />
+        <echo message="  project tmp deploy dir ...................... ${project.tmp.deploy.dir}" />
+        <echo />
+        <echo message="  project tmp build dir ....................... ${project.tmp.build.dir}" />
+        <echo message="  project tmp src dir ......................... ${project.tmp.src.dir}" />
+        <echo message="  project tmp javadoc dir ..................... ${project.tmp.javadoc.dir}" />
+        <echo />
+        <echo message="  jar classes file ............................ ${jar.classes.file}" />
+        <echo message="  jar sources file ............................ ${jar.sources.file}" />
+        <echo message="  jar javadoc file ............................ ${jar.javadoc.file}" />
+        <echo />
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+
+    <target name="jarClasses">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= deploy.jarClasses=-----" />
+        <echo />
+
+        <jar destfile="${jar.classes.file}" compress="true">
+            <fileset dir="${project.tmp.build.dir}" />
+            <manifest>
+                <attribute name="Implementation-Title" value="Java Miscellaneous Utilities Library" />
+                <attribute name="Implementation-Version" value="${version}" />
+            </manifest>
+        </jar>
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+
+    <target name="jarSources">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= deploy.jarSources =-----" />
+        <echo />
+
+        <jar destfile="${jar.sources.file}" compress="true">
+            <fileset dir="${project.tmp.src.dir}" />
+            <manifest>
+                <attribute name="Implementation-Title" value="Java Miscellaneous Utilities Library" />
+                <attribute name="Implementation-Version" value="${version}" />
+            </manifest>
+        </jar>
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+
+    <target name="jarJavadoc">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= deploy.jarJavadoc =-----" />
+        <echo />
+
+        <jar destfile="${jar.javadoc.file}" compress="true">
+            <fileset dir="${project.tmp.javadoc.dir}" />
+            <manifest>
+                <attribute name="Implementation-Title" value="Command Line Tool" />
+                <attribute name="Implementation-Version" value="${version}" />
+            </manifest>
+        </jar>
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+
+    <target name="deploy" depends="build.build, build-javadoc.build, info, jarClasses, jarSources, jarJavadoc" />
+
+
+</project>

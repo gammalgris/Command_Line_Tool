@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="antlib:org.apache.tools.ant" name="project-instrumented">
+
+
+    <include file="${basedir}\..\Ant-Common\common.xml" />
+    <include file="${basedir}\..\Ant-Sonar\project.xml" />
+
+
+    <property name="sonar.core.codeCoveragePlugin" value="cobertura" />
+    <property name="sonar.cobertura.reportPath" value="${project.tmp.coverage-report.dir}\coverage.xml" />
+
+
+</project>

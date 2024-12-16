@@ -1,0 +1,735 @@
+     [echo] 
+     [echo] -----= common.info =-----
+     [echo] 
+     [echo] 
+     [echo]   Command Line Tool
+     [echo] 
+     [echo]   build java version: 1.8
+     [echo]      build timestamp: 2024-05-31  18:10:30
+     [echo] 
+     [echo]      version library: 0.1
+     [echo]          version rcs: n/a
+     [echo] 
+     [echo] 
+     [echo]   ant version ................................. Apache Ant(TM) version 1.10.5 compiled on July 10 2018
+     [echo] 
+     [echo]   base dir .................................... D:\repositories\Command_Line_Tool\Batch\Ant-Deploy
+     [echo]   project dir ................................. D:\repositories\Command_Line_Tool
+     [echo] 
+     [echo] 
+     [echo]   packages base dir ........................... D:\repositories\Command_Line_Tool/Sources
+     [echo] 
+     [echo]   package core dir ............................ D:\repositories\Command_Line_Tool/Sources/Core
+     [echo]   package core src dir ........................ D:\repositories\Command_Line_Tool/Sources/Core/src
+     [echo]   package log viewer dir ...................... D:\repositories\Command_Line_Tool/Sources/LogViewer
+     [echo]   package log viewer src dir .................. D:\repositories\Command_Line_Tool/Sources/LogViewer/src
+     [echo]   package version dir ......................... D:\repositories\Command_Line_Tool/Sources/Version
+     [echo]   package version cfg dir ..................... D:\repositories\Command_Line_Tool/Sources/Version/properties
+     [echo] 
+     [echo]   package core tests dir ...................... D:\repositories\Command_Line_Tool/Sources/Core-Tests
+     [echo]   package log viewer tests src dir ............ D:\repositories\Command_Line_Tool/Sources/LogViewer-Tests/src
+     [echo] 
+     [echo] 
+     [echo] -----= classpath.info =-----
+     [echo] 
+     [echo] 
+     [echo]   project dir ....................... D:\repositories\Command_Line_Tool
+     [echo] 
+     [echo] 
+     [echo]   libraries dir ..................... D:\repositories\Command_Line_Tool\Libraries
+     [echo] 
+     [echo]   jmul dir .......................... D:\repositories\Command_Line_Tool\Libraries\Jmul
+     [echo]   jmul library ...................... D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar
+     [echo]   jmul cfg .......................... D:\repositories\Command_Line_Tool\Libraries\Jmul\properties
+     [echo] 
+     [echo]   junit dir ......................... D:\repositories\Command_Line_Tool\Libraries\JUnit
+     [echo]   junit library ..................... D:\repositories\Command_Line_Tool\Libraries\JUnit\junit-4.11.jar
+     [echo]   hamcrest library .................. D:\repositories\Command_Line_Tool\Libraries\JUnit\hamcrest-core-1.3.jar
+     [echo] 
+     [echo]   sonar ant task dir ................ D:\repositories\Command_Line_Tool\Libraries\SonarAntTask
+     [echo]   sonar ant task file ............... D:\repositories\Command_Line_Tool\Libraries\SonarAntTask\sonarqube-ant-task-2.4.jar
+     [echo] 
+     [echo]   cobertura dir ..................... D:\repositories\Command_Line_Tool\Libraries\Cobertura
+     [echo]   cobertura file .................... D:\repositories\Command_Line_Tool\Libraries\Cobertura\cobertura-2.1.1.jar
+     [echo]   cobertura libs dir ................ D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib
+     [echo] 
+     [echo] 
+     [echo] jmul execution classpath:
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Jmul\properties
+     [echo] 
+     [echo] jmul build classpath:
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar
+     [echo] 
+     [echo] 
+     [echo] junit execution classpath:
+     [echo] D:\repositories\Command_Line_Tool\Libraries\JUnit\junit-4.11.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\JUnit\hamcrest-core-1.3.jar
+     [echo] 
+     [echo] junit build classpath:
+     [echo] D:\repositories\Command_Line_Tool\Libraries\JUnit\junit-4.11.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\JUnit\hamcrest-core-1.3.jar
+     [echo] 
+     [echo] 
+     [echo] sonar execution classpath:
+     [echo] D:\repositories\Command_Line_Tool\Libraries\SonarAntTask\sonarqube-ant-task-2.4.jar
+     [echo] 
+     [echo] 
+     [echo] cobertura execution classpath:
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\cobertura-2.1.1-javadoc.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\cobertura-2.1.1-sources.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\cobertura-2.1.1.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\asm-5.0.1.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\asm-analysis-5.0.1.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\asm-commons-5.0.1.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\asm-tree-5.0.1.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\asm-util-5.0.1.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\commons-lang3-3.3.2.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\hamcrest-core-1.3.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\jaxen-1.1.4.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\jetty-6.1.14.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\jetty-util-6.1.14.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\junit-4.11.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\logback-classic-1.0.13.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\logback-core-1.0.13.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\oro-2.0.8.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\servlet-api-2.5-6.1.14.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Cobertura\lib\slf4j-api-1.7.5.jar
+     [echo] 
+     [echo] 
+     [echo] project execution classpath:
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Jmul\properties
+     [echo] 
+     [echo] project build classpath:
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar
+     [echo] 
+     [echo] 
+     [echo] project tests execution classpath:
+     [echo] D:\repositories\Command_Line_Tool\tmp\build
+     [echo] D:\repositories\Command_Line_Tool\tmp\properties
+     [echo] D:\repositories\Command_Line_Tool\tmp\tests-build
+     [echo] D:\repositories\Command_Line_Tool\tmp\tests-properties
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Jmul\properties
+     [echo] D:\repositories\Command_Line_Tool\Libraries\JUnit\junit-4.11.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\JUnit\hamcrest-core-1.3.jar
+     [echo] 
+     [echo] project tests build classpath:
+     [echo] D:\repositories\Command_Line_Tool\tmp\build
+     [echo] D:\repositories\Command_Line_Tool\tmp\tests-build
+     [echo] D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\JUnit\junit-4.11.jar
+     [echo] D:\repositories\Command_Line_Tool\Libraries\JUnit\hamcrest-core-1.3.jar
+     [echo] 
+     [echo] 
+     [echo] -----= temp.info =-----
+     [echo] 
+     [echo] 
+     [echo]   Command Line Tool
+     [echo] 
+     [echo] 
+     [echo]   project tmp dir ................................ D:\repositories\Command_Line_Tool/tmp
+     [echo] 
+     [echo]   project tmp src dir ............................ D:\repositories\Command_Line_Tool/tmp/src
+     [echo]   project tmp cfg dir ............................ D:\repositories\Command_Line_Tool/tmp/properties
+     [echo]   project tmp build dir .......................... D:\repositories\Command_Line_Tool/tmp/build
+     [echo]   project tmp deploy dir ......................... D:\repositories\Command_Line_Tool/tmp/deploy
+     [echo]   project tmp instrumented dir ................... D:\repositories\Command_Line_Tool/tmp/instrumented
+     [echo]   project tmp javadoc dir ........................ D:\repositories\Command_Line_Tool/tmp/javadoc
+     [echo] 
+     [echo]   project tmp tests-src dir ...................... D:\repositories\Command_Line_Tool/tmp/tests-src
+     [echo]   project tmp tests-cfg dir ...................... D:\repositories\Command_Line_Tool/tmp/tests-properties
+     [echo]   project tmp tests-build dir .................... D:\repositories\Command_Line_Tool/tmp/tests-build
+     [echo] 
+     [echo]   project tmp tests-results dir .................. D:\repositories\Command_Line_Tool/tmp/tests-results
+     [echo]   project tmp tests-report dir ................... D:\repositories\Command_Line_Tool/tmp/tests-report
+     [echo] 
+     [echo]   project tmp coverage file ...................... D:\repositories\Command_Line_Tool/tmp/cobertura.ser
+     [echo]   project tmp coverage-report dir ................ D:\repositories\Command_Line_Tool/tmp/coverage-report
+     [echo]   project tmp coverage-summary-report dir ........ D:\repositories\Command_Line_Tool/tmp/coverage-summary-report
+     [echo]   project tmp coverage-alternate-report dir ...... D:\repositories\Command_Line_Tool/tmp/coverage-alternate-report
+     [echo] 
+     [echo] 
+     [echo] -----= temp.initTmp =-----
+     [echo] 
+   [delete] Deleting directory D:\repositories\Command_Line_Tool\tmp
+    [mkdir] Created dir: D:\repositories\Command_Line_Tool\tmp
+    [mkdir] Created dir: D:\repositories\Command_Line_Tool\tmp\src
+    [mkdir] Created dir: D:\repositories\Command_Line_Tool\tmp\properties
+    [mkdir] Created dir: D:\repositories\Command_Line_Tool\tmp\build
+    [mkdir] Created dir: D:\repositories\Command_Line_Tool\tmp\deploy
+    [mkdir] Created dir: D:\repositories\Command_Line_Tool\tmp\instrumented
+    [mkdir] Created dir: D:\repositories\Command_Line_Tool\tmp\javadoc
+    [mkdir] Created dir: D:\repositories\Command_Line_Tool\tmp\tests-src
+    [mkdir] Created dir: D:\repositories\Command_Line_Tool\tmp\tests-properties
+    [mkdir] Created dir: D:\repositories\Command_Line_Tool\tmp\tests-build
+    [mkdir] Created dir: D:\repositories\Command_Line_Tool\tmp\tests-results
+    [mkdir] Created dir: D:\repositories\Command_Line_Tool\tmp\tests-report
+    [mkdir] Created dir: D:\repositories\Command_Line_Tool\tmp\coverage-report
+    [mkdir] Created dir: D:\repositories\Command_Line_Tool\tmp\coverage-summary-report
+    [mkdir] Created dir: D:\repositories\Command_Line_Tool\tmp\coverage-alternate-report
+     [echo] 
+     [echo] -----= build.copySources =-----
+     [echo] 
+     [copy] Copying 79 files to D:\repositories\Command_Line_Tool\tmp\src
+     [echo] 
+     [echo] -----= build.copyResources =-----
+     [echo] 
+     [copy] Copying 1 file to D:\repositories\Command_Line_Tool\tmp\properties
+     [echo] 
+     [echo] -----= build.build=-----
+     [echo] 
+    [javac] Compiling 79 source files to D:\repositories\Command_Line_Tool\tmp\build
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\assistant\Interpreter.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\assistant\SimpleRunner.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\cmd\ConstantValueParameter.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\cmd\DuplicateParameterNamesException.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\cmd\FixedPositionParameter.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\cmd\MissingMandatoryParametersException.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\cmd\MissingParameterException.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\cmd\ParameterContainer.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\cmd\ParameterContainerImpl.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\cmd\ParameterDescription.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\cmd\ParameterDescriptionBase.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\cmd\ParameterOccurrence.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\cmd\ParameterOccurrences.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\commands\AmbigousInputException.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\commands\Command.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\commands\CommandBase.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\commands\CommandCatalogue.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\commands\CommandCatalogueImpl.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\commands\CommandCategories.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\commands\InputNotParsableException.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\commands\ParameterlessSingleTokenCommand.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\commands\UnknownCommandException.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\language\catalogues\NoMatchingNameException.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\language\catalogues\StringTokenCatalogue.java]]
+    [javac] [parsing completed 15ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\language\catalogues\TokenCatalogue.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\language\tokenizers\SentenceTokenizer.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\language\tokenizers\StringTokenizer.java]]
+    [javac] [parsing completed 16ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\language\tokenizers\Tokenizer.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\language\types\Sequence.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\language\types\StringSequence.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\logging\LogViewer.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\Resources.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\Runner.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\ComponentBase.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\ComponentInitializationException.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\ComponentRoles.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\ComponentShutdownException.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\ComponentStates.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\IndependentComponentBase.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\SystemStates.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\core\ComponentAlreadyConnectedException.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\core\CoreComponent.java]]
+    [javac] [parsing completed 15ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\core\MissingMessagebusException.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\core\SigintHandler.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\core\WaitThread.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\logging\ConsoleLoggingComponent.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\logging\FileLoggingComponent.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\messages\ComponentReadyMessage.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\messages\ComponentStoppedMessage.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\messages\CustomPropertyKeys.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\messages\EntryHelper.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\messages\LogEntryMessage.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\messages\MessageHelper.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\messages\RegisterComponentMessage.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\messages\StopMessage.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\messaging\ComponentMessageHandler.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\messaging\MessageHandler.java]]
+    [javac] [parsing completed 1ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\messaging\MessageProcessingRule.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\misc\ComponentDictionary.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\misc\ComponentDictionaryImpl.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\misc\ComponentStateMonitor.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\misc\ComponentStateMonitorImpl.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\misc\NameRoleEntry.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\misc\NoProcessingRuleException.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\misc\SynchronizedComponentDictionary.java]]
+    [javac] [parsing completed 16ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\misc\SynchronizedComponentStateMonitor.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\state\ComponentStateHandler.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\state\StateHandler.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\state\StateUpdateRule.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\utils\logging\ConsoleLogger.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\utils\logging\Formatter.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\utils\logging\LogFormatter.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\utils\logging\LogLevel.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\utils\logging\LogLevels.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\utils\logging\Logger.java]]
+    [javac] [parsing completed 15ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\utils\logging\SynchronizedLogger.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\text\HorizontalTextAlignment.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\text\HorizontalTextAlignments.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [parsing started RegularFileObject[D:\repositories\Command_Line_Tool\tmp\src\jmul\text\TextAlignmentHelper.java]]
+    [javac] [parsing completed 0ms]
+    [javac] [search path for source files: D:\repositories\Command_Line_Tool\tmp\src]
+    [javac] [search path for class files: C:\Program Files\Java\jdk1.8.0_221\jre\lib\resources.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\rt.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\sunrsasign.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\jsse.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\jce.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\charsets.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\jfr.jar,C:\Program Files\Java\jdk1.8.0_221\jre\classes,C:\Program Files\Java\jdk1.8.0_221\jre\lib\ext\access-bridge-64.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\ext\cldrdata.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\ext\dnsns.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\ext\jaccess.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\ext\jfxrt.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\ext\localedata.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\ext\nashorn.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\ext\sunec.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\ext\sunjce_provider.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\ext\sunmscapi.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\ext\sunpkcs11.jar,C:\Program Files\Java\jdk1.8.0_221\jre\lib\ext\zipfs.jar,D:\repositories\Command_Line_Tool\tmp\build,D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/Console.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/ArrayList.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/List.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/query/QueryResult.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Deprecated.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/Date.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/concurrent/threads/ThreadHelper.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Thread.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Runnable.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Iterable.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/Set.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/RuntimeException.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Exception.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Throwable.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/Serializable.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/HashMap.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/HashSet.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/Map.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Enum.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Comparable.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/Arrays.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/Iterator.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/Collections.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/regex/Matcher.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/regex/Pattern.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/Collection.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/query/NoResultException.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/math/hash/HashHelper.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/BufferedReader.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/FileReader.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/IOException.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/io/SystemPaths.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/messaging/Message.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/messaging/MessageListener.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/messaging/MessageQuery.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/messaging/MessageQueryResult.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/messaging/MessageSender.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/messaging/Messagebus.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/messaging/Receiver.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/messaging/Sender.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/misc/state/State.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/misc/state/StateHelper.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/messaging/QueuingMessagebus.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/messaging/StandardMessage.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/misc/state/IllegalStateTransitionException.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Class.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/IllegalArgumentException.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/FileWriter.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/string/Constants.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/messaging/PropertyKey.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/Map$Entry.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/reflect/InvocationTargetException.class)]]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/reflection/constructors/ConstructorInvoker.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/text/DateFormat.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/text/SimpleDateFormat.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Retention.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/RetentionPolicy.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Target.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/ElementType.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Annotation.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/sun/misc/Contended.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Override.class)]]
+    [javac] [checking assistant.Interpreter]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/AutoCloseable.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\assistant\Interpreter.class]]
+    [javac] [checking assistant.SimpleRunner]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Runtime.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\assistant\SimpleRunner.class]]
+    [javac] [checking assistant.Counter]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/System.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/PrintStream.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Appendable.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/Closeable.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/FilterOutputStream.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/OutputStream.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/Flushable.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\assistant\Counter.class]]
+    [javac] [checking assistant.SigintHandler]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Byte.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Character.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Short.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Long.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Float.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Integer.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Double.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Boolean.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Void.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/CharSequence.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\assistant\SigintHandler.class]]
+    [javac] [checking jmul.cmd.ConstantValueParameter]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/Locale.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Error.class)]]
+    [javac] [checking jmul.cmd.ParameterDescriptionBase]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\cmd\ConstantValueParameter.class]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\cmd\ParameterDescriptionBase.class]]
+    [javac] [checking jmul.cmd.ParameterDescription]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\cmd\ParameterDescription.class]]
+    [javac] [checking jmul.cmd.ParameterOccurrence]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\cmd\ParameterOccurrence.class]]
+    [javac] [checking jmul.language.types.Sequence]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/Spliterator.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/function/Consumer.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\language\types\Sequence.class]]
+    [javac] [checking jmul.cmd.DuplicateParameterNamesException]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\cmd\DuplicateParameterNamesException.class]]
+    [javac] [checking jmul.cmd.FixedPositionParameter]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Number.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\cmd\FixedPositionParameter.class]]
+    [javac] [checking jmul.cmd.MissingMandatoryParametersException]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\cmd\MissingMandatoryParametersException.class]]
+    [javac] [checking jmul.cmd.MissingParameterException]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\cmd\MissingParameterException.class]]
+    [javac] [checking jmul.cmd.ParameterContainer]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\cmd\ParameterContainer.class]]
+    [javac] [checking jmul.cmd.ParameterContainerImpl]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/AbstractMap.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/AbstractList.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/AbstractCollection.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/AbstractSet.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/StringBuilder.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/StringBuffer.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/AbstractStringBuilder.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\cmd\ParameterContainerImpl.class]]
+    [javac] [checking jmul.cmd.ParameterOccurrences]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/CloneNotSupportedException.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\cmd\ParameterOccurrences.class]]
+    [javac] [checking jmul.commands.AmbigousInputException]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\commands\AmbigousInputException.class]]
+    [javac] [checking jmul.commands.Command]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\commands\Command.class]]
+    [javac] [checking jmul.commands.CommandBase]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\commands\CommandBase.class]]
+    [javac] [checking jmul.commands.CommandCatalogue]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\commands\CommandCatalogue.class]]
+    [javac] [checking jmul.commands.CommandCatalogueImpl]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\commands\CommandCatalogueImpl.class]]
+    [javac] [checking jmul.commands.CommandCategories]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/UnsupportedOperationException.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\commands\CommandCategories.class]]
+    [javac] [checking jmul.commands.InputNotParsableException]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\commands\InputNotParsableException.class]]
+    [javac] [checking jmul.commands.ParameterlessSingleTokenCommand]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/util/regex/MatchResult.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\commands\ParameterlessSingleTokenCommand.class]]
+    [javac] [checking jmul.commands.UnknownCommandException]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\commands\UnknownCommandException.class]]
+    [javac] [checking jmul.language.catalogues.NoMatchingNameException]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\language\catalogues\NoMatchingNameException.class]]
+    [javac] [checking jmul.language.catalogues.StringTokenCatalogue]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\language\catalogues\StringTokenCatalogue.class]]
+    [javac] [checking jmul.language.catalogues.TokenCatalogue]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\language\catalogues\TokenCatalogue.class]]
+    [javac] [checking jmul.language.catalogues.TokenResult]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\language\catalogues\TokenResult.class]]
+    [javac] [checking jmul.language.catalogues.TokenSequenceResult]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\language\catalogues\TokenSequenceResult.class]]
+    [javac] [checking jmul.language.tokenizers.SentenceTokenizer]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\language\tokenizers\SentenceTokenizer.class]]
+    [javac] [checking jmul.language.tokenizers.Tokenizer]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\language\tokenizers\Tokenizer.class]]
+    [javac] [checking jmul.language.tokenizers.StringTokenizer]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\language\tokenizers\StringTokenizer.class]]
+    [javac] [checking jmul.language.types.StringSequence]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/reflect/GenericDeclaration.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/reflect/AnnotatedElement.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/reflect/Type.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\language\types\StringSequence.class]]
+    [javac] [checking jmul.logging.LogViewer]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/FileDescriptor.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/File.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/InputStreamReader.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/Reader.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Readable.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/FileNotFoundException.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\logging\LogViewer$SigintHandler.class]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\logging\LogViewer.class]]
+    [javac] [checking jmul.terminal.Resources]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\Resources.class]]
+    [javac] [checking jmul.terminal.utils.logging.Logger]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\utils\logging\Logger.class]]
+    [javac] [checking jmul.terminal.utils.logging.LogLevel]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\utils\logging\LogLevel.class]]
+    [javac] [checking jmul.terminal.Runner]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\Runner.class]]
+    [javac] [checking jmul.terminal.component.ComponentBase]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\ComponentBase.class]]
+    [javac] [checking jmul.terminal.component.ComponentInitializationException]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\ComponentInitializationException.class]]
+    [javac] [checking jmul.terminal.component.ComponentRoles]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\ComponentRoles.class]]
+    [javac] [checking jmul.terminal.component.ComponentShutdownException]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\ComponentShutdownException.class]]
+    [javac] [checking jmul.terminal.component.ComponentStates]
+    [javac] [loading ZipFileIndexFileObject[D:\repositories\Command_Line_Tool\Libraries\Jmul\jmul-2.1.11.jar(jmul/misc/state/UnknownStateException.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\ComponentStates.class]]
+    [javac] [checking jmul.terminal.component.ComponentStateNames]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\ComponentStateNames.class]]
+    [javac] [checking jmul.terminal.component.IndependentComponentBase]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\IndependentComponentBase.class]]
+    [javac] [checking jmul.terminal.component.SystemStates]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\SystemStates.class]]
+    [javac] [checking jmul.terminal.component.SystemStateNames]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\SystemStateNames.class]]
+    [javac] [checking jmul.terminal.component.core.ComponentAlreadyConnectedException]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\core\ComponentAlreadyConnectedException.class]]
+    [javac] [checking jmul.terminal.component.core.CoreComponent]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\core\CoreComponent$ComponentReadyRule.class]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\core\CoreComponent$StopComponentsRule.class]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\core\CoreComponent$ComponentStoppedRule.class]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\core\CoreComponent$UpdateToInitializedRule.class]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\core\CoreComponent$UpdateToStartingRule.class]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\core\CoreComponent$UpdateToRunningRule.class]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\core\CoreComponent$UpdateToStoppedRule.class]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\core\CoreComponent.class]]
+    [javac] [checking jmul.terminal.component.misc.ComponentDictionary]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\misc\ComponentDictionary.class]]
+    [javac] [checking jmul.terminal.component.misc.ComponentStateMonitor]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\misc\ComponentStateMonitor.class]]
+    [javac] [checking jmul.terminal.component.messaging.MessageHandler]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\messaging\MessageHandler.class]]
+    [javac] [checking jmul.terminal.component.messaging.MessageProcessingRule]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\messaging\MessageProcessingRule.class]]
+    [javac] [checking jmul.terminal.component.state.StateHandler]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\state\StateHandler.class]]
+    [javac] [checking jmul.terminal.component.state.StateUpdateRule]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\state\StateUpdateRule.class]]
+    [javac] [checking jmul.terminal.component.misc.NameRoleEntry]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\misc\NameRoleEntry.class]]
+    [javac] [checking jmul.terminal.component.core.MissingMessagebusException]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\core\MissingMessagebusException.class]]
+    [javac] [checking jmul.terminal.component.core.SigintHandler]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\core\SigintHandler.class]]
+    [javac] [checking jmul.terminal.component.core.WaitThread]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\core\WaitThread.class]]
+    [javac] [checking jmul.terminal.component.logging.ConsoleLoggingComponent]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\logging\ConsoleLoggingComponent$ProcessLogEntryMessageRule.class]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\logging\ConsoleLoggingComponent$ProcessStopMessageRule.class]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\logging\ConsoleLoggingComponent.class]]
+    [javac] [checking jmul.terminal.component.logging.FileLoggingComponent]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/OutputStreamWriter.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/io/Writer.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\logging\FileLoggingComponent$ProcessLogEntryMessageRule.class]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\logging\FileLoggingComponent$ProcessStopMessageRule.class]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\logging\FileLoggingComponent.class]]
+    [javac] [checking jmul.terminal.utils.logging.Formatter]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\utils\logging\Formatter.class]]
+    [javac] [checking jmul.terminal.component.messages.ComponentReadyMessage]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\messages\ComponentReadyMessage.class]]
+    [javac] [checking jmul.terminal.component.messages.ComponentStoppedMessage]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\messages\ComponentStoppedMessage.class]]
+    [javac] [checking jmul.terminal.component.messages.CustomPropertyKeys]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\messages\CustomPropertyKeys.class]]
+    [javac] [checking jmul.terminal.component.messages.EntryHelper]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\messages\EntryHelper$1.class]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\messages\EntryHelper.class]]
+    [javac] [checking jmul.terminal.component.messages.LogEntryMessage]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\messages\LogEntryMessage.class]]
+    [javac] [checking jmul.terminal.component.messages.MessageHelper]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/IllegalAccessException.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/ReflectiveOperationException.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/InstantiationException.class)]]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/NoSuchMethodException.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\messages\MessageHelper.class]]
+    [javac] [checking jmul.terminal.component.messages.RegisterComponentMessage]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\messages\RegisterComponentMessage.class]]
+    [javac] [checking jmul.terminal.component.messages.StopMessage]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\messages\StopMessage.class]]
+    [javac] [checking jmul.terminal.component.messaging.ComponentMessageHandler]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\messaging\ComponentMessageHandler.class]]
+    [javac] [checking jmul.terminal.component.misc.ComponentDictionaryImpl]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Cloneable.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\misc\ComponentDictionaryImpl.class]]
+    [javac] [checking jmul.terminal.component.misc.ComponentStateMonitorImpl]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\misc\ComponentStateMonitorImpl.class]]
+    [javac] [checking jmul.terminal.component.misc.NoProcessingRuleException]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\misc\NoProcessingRuleException.class]]
+    [javac] [checking jmul.terminal.component.misc.SynchronizedComponentDictionary]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\misc\SynchronizedComponentDictionary.class]]
+    [javac] [checking jmul.terminal.component.misc.SynchronizedComponentStateMonitor]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\misc\SynchronizedComponentStateMonitor.class]]
+    [javac] [checking jmul.terminal.component.state.ComponentStateHandler]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\component\state\ComponentStateHandler.class]]
+    [javac] [checking jmul.terminal.utils.logging.ConsoleLogger]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\utils\logging\ConsoleLogger.class]]
+    [javac] [checking jmul.terminal.utils.logging.LogFormatter]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/text/Format.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\utils\logging\LogFormatter.class]]
+    [javac] [checking jmul.terminal.utils.logging.LogLevels]
+    [javac] [loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.8.0_221\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Math.class)]]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\utils\logging\LogLevels.class]]
+    [javac] [checking jmul.terminal.utils.logging.SynchronizedLogger]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\terminal\utils\logging\SynchronizedLogger.class]]
+    [javac] [checking jmul.text.HorizontalTextAlignment]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\text\HorizontalTextAlignment.class]]
+    [javac] [checking jmul.text.HorizontalTextAlignments]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\text\HorizontalTextAlignments.class]]
+    [javac] [checking jmul.text.TextAlignmentHelper]
+    [javac] [wrote RegularFileObject[D:\repositories\Command_Line_Tool\tmp\build\jmul\text\TextAlignmentHelper.class]]
+    [javac] [total 1156ms]
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+     [echo] 
+     [echo] -----= build-javadoc.build =-----
+     [echo] 
+  [javadoc] Generating Javadoc
+  [javadoc] Javadoc execution
+  [javadoc] Loading source files for package assistant...
+  [javadoc] Loading source files for package jmul.cmd...
+  [javadoc] Loading source files for package jmul.commands...
+  [javadoc] Loading source files for package jmul.language.catalogues...
+  [javadoc] Loading source files for package jmul.language.tokenizers...
+  [javadoc] Loading source files for package jmul.language.types...
+  [javadoc] Loading source files for package jmul.logging...
+  [javadoc] Loading source files for package jmul.terminal...
+  [javadoc] Loading source files for package jmul.terminal.component...
+  [javadoc] Loading source files for package jmul.terminal.component.core...
+  [javadoc] Loading source files for package jmul.terminal.component.logging...
+  [javadoc] Loading source files for package jmul.terminal.component.messages...
+  [javadoc] Loading source files for package jmul.terminal.component.messaging...
+  [javadoc] Loading source files for package jmul.terminal.component.misc...
+  [javadoc] Loading source files for package jmul.terminal.component.state...
+  [javadoc] Loading source files for package jmul.terminal.utils.logging...
+  [javadoc] Loading source files for package jmul.text...
+  [javadoc] Constructing Javadoc information...
+  [javadoc] Standard Doclet version 1.8.0_221
+  [javadoc] Building tree for all the packages and classes...
+  [javadoc] D:\repositories\Command_Line_Tool\tmp\src\jmul\commands\Command.java:91: warning: no description for @return
+  [javadoc]      * @return
+  [javadoc]        ^
+  [javadoc] D:\repositories\Command_Line_Tool\tmp\src\jmul\commands\CommandBase.java:221: warning: no description for @return
+  [javadoc]      * @return
+  [javadoc]        ^
+  [javadoc] D:\repositories\Command_Line_Tool\tmp\src\jmul\language\types\StringSequence.java:223: error: unknown tag: implNote
+  [javadoc]      * @implNote
+  [javadoc]        ^
+  [javadoc] D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\ComponentStates.java:176: error: reference not found
+  [javadoc]      * @throws IllegalStateTransitionException
+  [javadoc]        ^
+  [javadoc] D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\ComponentStates.java:201: error: reference not found
+  [javadoc]      * @throws UnknownStateException
+  [javadoc]        ^
+  [javadoc] D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\SystemStates.java:183: error: reference not found
+  [javadoc]      * @throws IllegalStateTransitionException
+  [javadoc]        ^
+  [javadoc] D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\SystemStates.java:208: error: reference not found
+  [javadoc]      * @throws UnknownStateException
+  [javadoc]        ^
+  [javadoc] D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\logging\FileLoggingComponent.java:141: warning: no @param for logFile
+  [javadoc]     public FileLoggingComponent(String name, LogLevel logLevel, String logFile, NameRoleEntry... componentEntries) {
+  [javadoc]            ^
+  [javadoc] D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\messages\LogEntryMessage.java:72: warning: no @param for logLevel
+  [javadoc]     public LogEntryMessage(String sender, String recipient, LogLevel logLevel, String logEntry) {
+  [javadoc]            ^
+  [javadoc] D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\messages\LogEntryMessage.java:72: warning: no @param for logEntry
+  [javadoc]     public LogEntryMessage(String sender, String recipient, LogLevel logLevel, String logEntry) {
+  [javadoc]            ^
+  [javadoc] D:\repositories\Command_Line_Tool\tmp\src\jmul\terminal\component\misc\ComponentDictionaryImpl.java:75: warning: no description for @param
+  [javadoc]      * @param entries
+  [javadoc]        ^
+  [javadoc] Building index for all the packages and classes...
+  [javadoc] Building index for all classes...
+  [javadoc] Generating D:\repositories\Command_Line_Tool\tmp\javadoc\help-doc.html...
+  [javadoc] 5 errors
+  [javadoc] 6 warnings
+     [echo] 
+     [echo] -----= deploy.info =-----
+     [echo] 
+     [echo] 
+     [echo]   project tmp deploy dir ...................... D:\repositories\Command_Line_Tool/tmp/deploy
+     [echo] 
+     [echo]   project tmp build dir ....................... D:\repositories\Command_Line_Tool/tmp/build
+     [echo]   project tmp src dir ......................... D:\repositories\Command_Line_Tool/tmp/src
+     [echo]   project tmp javadoc dir ..................... D:\repositories\Command_Line_Tool/tmp/javadoc
+     [echo] 
+     [echo]   jar classes file ............................ D:\repositories\Command_Line_Tool\tmp\deploy\clt-0.1.jar
+     [echo]   jar sources file ............................ D:\repositories\Command_Line_Tool\tmp\deploy\clt-0.1-sources.jar
+     [echo]   jar javadoc file ............................ D:\repositories\Command_Line_Tool\tmp\deploy\clt-0.1-javadoc.jar
+     [echo] 
+     [echo] 
+     [echo] -----= deploy.jarClasses=-----
+     [echo] 
+      [jar] Building jar: D:\repositories\Command_Line_Tool\tmp\deploy\clt-0.1.jar
+     [echo] 
+     [echo] -----= deploy.jarSources =-----
+     [echo] 
+      [jar] Building jar: D:\repositories\Command_Line_Tool\tmp\deploy\clt-0.1-sources.jar
+     [echo] 
+     [echo] -----= deploy.jarJavadoc =-----
+     [echo] 
+      [jar] Building jar: D:\repositories\Command_Line_Tool\tmp\deploy\clt-0.1-javadoc.jar

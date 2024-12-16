@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="antlib:org.apache.tools.ant" name="classpath">
+
+
+    <include file="${basedir}\..\Ant-Common\common.xml" />
+
+
+    <property name="project.lib.dir" location="${project.dir}\Libraries" />
+
+    <property name="project.lib.jmul.dir" location="${project.lib.dir}\Jmul" />
+    <property name="project.lib.jmul.file" location="${project.lib.jmul.dir}\jmul-2.1.11.jar" />
+    <property name="project.lib.jmul.cfg" location="${project.lib.jmul.dir}\properties" />
+
+    <property name="project.lib.junit.dir" location="${project.lib.dir}\JUnit" />
+    <property name="project.lib.junit.file" location="${project.lib.junit.dir}\junit-4.11.jar" />
+    <property name="project.lib.hamcrest.file" location="${project.lib.junit.dir}\hamcrest-core-1.3.jar" />
+
+    <property name="project.lib.sonar-ant-task.dir" location="${project.lib.dir}\SonarAntTask" />
+    <property name="project.lib.sonar-ant-task.file" location="${project.lib.sonar-ant-task.dir}\sonarqube-ant-task-2.4.jar" />
+
+    <property name="project.lib.cobertura.dir" location="${project.lib.dir}\Cobertura" />
+    <property name="project.lib.cobertura.file" location="${project.lib.cobertura.dir}\cobertura-2.1.1.jar" />
+    <property name="project.lib.cobertura-libs.dir" location="${project.lib.cobertura.dir}\lib" />
+
+
+    <!-- libraries execution and build classpaths -->
+
+    <path id="jmul.execution.classpath">
+        <pathelement location="${project.lib.jmul.file}" />
+        <pathelement location="${project.lib.jmul.cfg}" />
+    </path>
+
+    <pathconvert property="jmul.execution.classpath.string" refid="jmul.execution.classpath" pathsep="${line.separator}" />
+
+    <path id="jmul.build.classpath">
+        <pathelement location="${project.lib.jmul.file}" />
+    </path>
+
+    <pathconvert property="jmul.build.classpath.string" refid="jmul.build.classpath" pathsep="${line.separator}" />
+
+
+    <path id="junit.execution.classpath">
+        <pathelement location="${project.lib.junit.file}" />
+        <pathelement location="${project.lib.hamcrest.file}" />
+    </path>
+
+    <pathconvert property="junit.execution.classpath.string" refid="junit.execution.classpath" pathsep="${line.separator}" />
+
+    <path id="junit.build.classpath">
+        <pathelement location="${project.lib.junit.file}" />
+        <pathelement location="${project.lib.hamcrest.file}" />
+    </path>
+
+    <pathconvert property="junit.build.classpath.string" refid="junit.build.classpath" pathsep="${line.separator}" />
+
+
+    <path id="sonar.execution.classpath">
+        <pathelement location="${project.lib.sonar-ant-task.file}" />
+    </path>
+
+    <pathconvert property="sonar.execution.classpath.string" refid="sonar.execution.classpath" pathsep="${line.separator}" />
+
+
+    <path id="cobertura.execution.classpath">
+        <fileset dir="${project.lib.cobertura.dir}">
+            <include name="cobertura*.jar" />
+            <include name="lib/**/*.jar" />
+        </fileset>
+    </path>
+
+    <pathconvert property="cobertura.execution.classpath.string" refid="cobertura.execution.classpath" pathsep="${line.separator}" />
+
+
+    <!-- tests execution and build classpath -->
+
+    <path id="tests.execution.classpath">
+        <pathelement location="${project.tmp.build.dir}" />
+        <pathelement location="${project.tmp.cfg.dir}" />
+        <pathelement location="${project.tmp.tests-build.dir}" />
+        <pathelement location="${project.tmp.tests-cfg.dir}" />
+        <pathelement location="${project.lib.jmul.file}" />
+        <pathelement location="${project.lib.jmul.cfg}" />
+        <pathelement location="${project.lib.junit.file}" />
+        <pathelement location="${project.lib.hamcrest.file}" />
+    </path>
+
+    <pathconvert property="tests.execution.classpath.string" refid="tests.execution.classpath" pathsep="${line.separator}" />
+
+    <path id="tests.build.classpath">
+        <pathelement location="${project.tmp.build.dir}" />
+        <pathelement location="${project.tmp.tests-build.dir}" />
+        <pathelement location="${project.lib.jmul.file}" />
+        <pathelement location="${project.lib.junit.file}" />
+        <pathelement location="${project.lib.hamcrest.file}" />
+    </path>
+
+    <pathconvert property="tests.build.classpath.string" refid="tests.build.classpath" pathsep="${line.separator}" />
+
+
+    <!-- project execution and build classpath -->
+
+    <path id="execution.classpath">
+        <pathelement location="${project.tmp.build.dir}" />
+        <pathelement location="${project.tmp.cfg.dir}" />
+        <pathelement location="${project.lib.jmul.file}" />
+        <pathelement location="${project.lib.jmul.cfg}" />
+    </path>
+
+    <pathconvert property="execution.classpath.string" refid="jmul.execution.classpath" pathsep="${line.separator}" />
+
+    <path id="build.classpath">
+        <pathelement location="${project.tmp.build.dir}" />
+        <pathelement location="${project.lib.jmul.file}" />
+    </path>
+
+    <pathconvert property="build.classpath.string" refid="jmul.build.classpath" pathsep="${line.separator}" />
+
+
+    <target name="info">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= classpath.info =-----" />
+        <echo />
+
+        <echo />
+        <echo message="  project dir ....................... ${project.dir}" />
+        <echo />
+        <echo />
+        <echo message="  libraries dir ..................... ${project.lib.dir}" />
+        <echo />
+        <echo message="  jmul dir .......................... ${project.lib.jmul.dir}" />
+        <echo message="  jmul library ...................... ${project.lib.jmul.file}" />
+        <echo message="  jmul cfg .......................... ${project.lib.jmul.cfg}" />
+        <echo />
+        <echo message="  junit dir ......................... ${project.lib.junit.dir}" />
+        <echo message="  junit library ..................... ${project.lib.junit.file}" />
+        <echo message="  hamcrest library .................. ${project.lib.hamcrest.file}" />
+        <echo />
+        <echo message="  sonar ant task dir ................ ${project.lib.sonar-ant-task.dir}" />
+        <echo message="  sonar ant task file ............... ${project.lib.sonar-ant-task.file}" />
+        <echo />
+        <echo message="  cobertura dir ..................... ${project.lib.cobertura.dir}" />
+        <echo message="  cobertura file .................... ${project.lib.cobertura.file}" />
+        <echo message="  cobertura libs dir ................ ${project.lib.cobertura-libs.dir}" />
+        <echo />
+        <echo />
+        <echo message="jmul execution classpath:" />
+        <echo message="${jmul.execution.classpath.string}" />
+        <echo />
+        <echo message="jmul build classpath:" />
+        <echo message="${jmul.build.classpath.string}" />
+        <echo />
+        <echo />
+        <echo message="junit execution classpath:" />
+        <echo message="${junit.execution.classpath.string}" />
+        <echo />
+        <echo message="junit build classpath:" />
+        <echo message="${junit.build.classpath.string}" />
+        <echo />
+        <echo />
+        <echo message="sonar execution classpath:" />
+        <echo message="${sonar.execution.classpath.string}" />
+        <echo />
+        <echo />
+        <echo message="cobertura execution classpath:" />
+        <echo message="${cobertura.execution.classpath.string}" />
+        <echo />
+        <echo />
+        <echo message="project execution classpath:" />
+        <echo message="${execution.classpath.string}" />
+        <echo />
+        <echo message="project build classpath:" />
+        <echo message="${build.classpath.string}" />
+        <echo />
+        <echo />
+        <echo message="project tests execution classpath:" />
+        <echo message="${tests.execution.classpath.string}" />
+        <echo />
+        <echo message="project tests build classpath:" />
+        <echo message="${tests.build.classpath.string}" />
+        <echo />
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+</project>

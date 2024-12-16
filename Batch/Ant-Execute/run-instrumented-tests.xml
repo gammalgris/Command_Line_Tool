@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="antlib:org.apache.tools.ant" name="run-instrumented-tests">
+
+
+    <include file="${basedir}\..\Ant-Common\common.xml" />
+    <include file="${basedir}\..\Ant-Common\temp.xml" />
+    <include file="${basedir}\..\Ant-Common\classpath.xml" />
+    <include file="${basedir}\..\Ant-Build\build.xml" />
+    <include file="${basedir}\..\Ant-Build\build-tests.xml" />
+    <include file="${basedir}\..\Ant-Build\build-javadoc.xml" />
+    <include file="${basedir}\..\Ant-Build\build-instrumented.xml" />
+
+
+    <target name="runTests" depends="build-tests.build, build-instrumented.instrument">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= run-instrumented-tests.runTests =-----" />
+        <echo />
+
+        <junit printsummary="yes" showoutput="true" fork="yes" dir="${project.tmp.dir}">
+
+            <sysproperty key="net.sourceforge.cobertura.datafile" file="${project.tmp.coverage.file}" />
+
+            <classpath location="${project.tmp.instrumented.dir}" />
+            <classpath refid="tests.execution.classpath" />
+            <classpath refid="cobertura.execution.classpath" />
+
+            <batchtest todir="${project.tmp.tests-results.dir}">
+                <fileset dir="${project.tmp.tests-src.dir}">
+                  <include name="**/*Test.java" />
+                </fileset>
+            </batchtest>
+
+            <formatter type="xml" usefile="yes" />
+
+        </junit>
+
+
+        <junitreport todir="${project.tmp.tests-report.dir}">
+            <fileset dir="${project.tmp.tests-results.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${project.tmp.tests-report.dir}\html" />
+        </junitreport>
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+
+    <!-- target name="coverage-check">
+
+        <cobertura-check branchrate="34" totallinerate="100" datafile="${project.tmp.coverage.file}" />
+
+    </target -->
+
+
+    <target name="coverage-report">
+
+        <record name="${build.log}" action="start" />
+
+        <echo />
+        <echo message="-----= run-instrumented-tests.coverage-report =-----" />
+        <echo />
+
+        <cobertura-report srcdir="${project.tmp.src.dir}" destdir="${project.tmp.coverage-report.dir}" format="xml" datafile="${project.tmp.coverage.file}" />
+
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+
+    <target name="summary-coverage-report">
+
+        <record name="${build.log}" action="start" />
+        <cobertura-report srcdir="${project.tmp.src.dir}" destdir="${project.tmp.coverage-summary-report.dir}" format="summaryXml" datafile="${project.tmp.coverage.file}" />
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+
+    <target name="alternate-coverage-report">
+
+        <record name="${build.log}" action="start" />
+        <cobertura-report destdir="${project.tmp.coverage-alternate-report.dir}" datafile="${project.tmp.coverage.file}">
+            <fileset dir="${project.tmp.src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+        </cobertura-report>
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+
+    <target name="copyReportsAndDocumentation" depends="build-javadoc.build">
+
+        <record name="${build.log}" action="start" />
+        <copy todir="${project.tmp.web-content.coverage-report.dir}">
+            <fileset dir="${project.tmp.coverage-alternate-report.dir}">
+                <include name="**/*.*" />
+            </fileset>
+        </copy>
+
+        <copy todir="${project.tmp.web-content.tests-report.dir}">
+            <fileset dir="${project.tmp.tests-report.dir}/html">
+                <include name="**/*.*" />
+            </fileset>
+        </copy>
+
+        <copy todir="${project.tmp.web-content.javadoc.dir}">
+            <fileset dir="${project.tmp.javadoc.dir}">
+                <include name="**/*.*" />
+            </fileset>
+        </copy>
+
+
+        <copy todir="${project.tmp.web-content.measures.doc.dir}">
+            <fileset dir="${package.measures-docs.src.dir}">
+                <include name="**/*.*" />
+            </fileset>
+        </copy>
+
+        <copy todir="${project.tmp.web-content.persistence.doc.dir}">
+            <fileset dir="${package.persistence.doc.dir}">
+                <include name="**/*.*" />
+            </fileset>
+        </copy>
+
+        <copy todir="${project.tmp.web-content.transformation.doc.dir}">
+            <fileset dir="${package.transformation.doc.dir}">
+                <include name="**/*.*" />
+            </fileset>
+        </copy>
+
+        <copy todir="${project.tmp.web-content.web.doc.dir}">
+            <fileset dir="${package.web.doc.dir}">
+                <include name="**/*.*" />
+            </fileset>
+        </copy>
+
+
+        <copy todir="${project.tmp.web-content.dir}">
+            <fileset dir="${package.documentation.src.dir}">
+                <include name="**/*.*" />
+            </fileset>
+        </copy>
+        <record name="${build.log}" action="stop" />
+
+    </target>
+
+
+    <target name="coverage" depends="runTests, coverage-report, summary-coverage-report, alternate-coverage-report, copyReportsAndDocumentation" />
+
+</project>

@@ -1,0 +1,31 @@
+     [echo] 
+     [echo] -----= common.info =-----
+     [echo] 
+     [echo] 
+     [echo]   Command Line Tool
+     [echo] 
+     [echo]   build java version: 1.8
+     [echo]      build timestamp: 2024-05-31  18:27:49
+     [echo] 
+     [echo]      version library: 0.1
+     [echo]          version rcs: n/a
+     [echo] 
+     [echo] 
+     [echo]   ant version ................................. Apache Ant(TM) version 1.10.5 compiled on July 10 2018
+     [echo] 
+     [echo]   base dir .................................... D:\repositories\Command_Line_Tool\Batch\Ant-Common
+     [echo]   project dir ................................. D:\repositories\Command_Line_Tool
+     [echo] 
+     [echo] 
+     [echo]   packages base dir ........................... D:\repositories\Command_Line_Tool/Sources
+     [echo] 
+     [echo]   package core dir ............................ D:\repositories\Command_Line_Tool/Sources/Core
+     [echo]   package core src dir ........................ D:\repositories\Command_Line_Tool/Sources/Core/src
+     [echo]   package log viewer dir ...................... D:\repositories\Command_Line_Tool/Sources/LogViewer
+     [echo]   package log viewer src dir .................. D:\repositories\Command_Line_Tool/Sources/LogViewer/src
+     [echo]   package version dir ......................... D:\repositories\Command_Line_Tool/Sources/Version
+     [echo]   package version cfg dir ..................... D:\repositories\Command_Line_Tool/Sources/Version/properties
+     [echo] 
+     [echo]   package core tests dir ...................... D:\repositories\Command_Line_Tool/Sources/Core-Tests/src
+     [echo]   package log viewer tests src dir ............ D:\repositories\Command_Line_Tool/Sources/LogViewer-Tests/src
+     [echo] 

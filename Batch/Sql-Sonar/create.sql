@@ -1,0 +1,12 @@
+
+-- PostgreSQL
+
+CREATE USER {UserName} PASSWORD {Credentials};
+
+CREATE DATABASE {DatabaseName} WITH OWNER {UserName};
+GRANT CONNECT ON DATABASE {DatabaseName} To {UserName};
+GRANT ALL PRIVILEGES ON DATABASE {DatabaseName} To {UserName};
+
+GRANT USAGE ON SCHEMA public TO {UserName};
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO {UserName};
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO {UserName};
